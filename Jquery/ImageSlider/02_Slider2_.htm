@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../cdnjquery/jquery2/jquery-1.10.2.js"></script>
+    <script>
+        function slideSwitch() {
+            var $active = $('div#slideshow img.active');
+            var$next = $active.next();
+            $next.addClass('active');
+            $active.removeClass('active');
+        }
+        $(function () {
+            setInterval(slideSwitch, 3000);
+        });
+    </script>
+    <!-- <script>
+        function slideSwitch() {
+            var $active = $('div#slideshow img.active');
+            var $next = $active.next();
+            $next.addClass('active');
+            $active.removeClass('active');
+        }
+    
+        $(function () {
+            setInterval(slideSwitch, 3000);
+        });
+    </script>
+     -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .active {
+            z-index: 99;
+        }
+
+        #img {
+            width: 100%;
+            height: 600px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slideshow">
+        <img src="../photos/DNA.jpg" id="img" class="active">
+        <img src="../photos/neutrons.jpg" id="img">
+        <img src="../photos/RNA.jpg" id="img">
+        <img src="../photos/SSS.jpg" id="img">
+    </div>
+</body>
+
+</html>

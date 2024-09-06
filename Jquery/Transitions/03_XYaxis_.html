@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../cdnjquery/jquery2/jquery-1.10.2.js"></script>
+    <script src="../cdnjquery/jquery2/jquery.transit.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#a").click(function(){
+                $(this).transition({y: '200px',x:'200px'});
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="height: 100px; width:100px; background-color: #f00" id="a"></div>
+</body>
+
+</html>

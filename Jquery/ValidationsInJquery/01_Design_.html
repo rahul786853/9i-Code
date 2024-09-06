@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../cdnjquery/jquery2/jquery-1.10.2.js"></script>
+    <script src="../cdnjquery/jquery2/jQuery.Validate.min.js"></script> 
+    <script>
+        $(function(){
+            $("form[name='registration']").validate({
+              rules:{
+                firstname: "required",
+                lastname: "required",
+                email:{
+                    required:true,
+                    email:true
+                },
+                password:{
+                    required:true,
+                    minlength:8
+                },
+                messages:{
+                    firstname:"Please enter your firstname",
+                    lastname:"Please enter your lastname",
+                    email:"please enter a valid email address",
+                },
+                password:{
+                    required:"Please provide a password",
+                    minlength:"Your password must be at least 8 characters long"
+                },
+                // email:"Please enter a valid email address"
+              },
+              submitHandler:function(form){
+                form.submit();
+              }  
+            });
+        });
+    </script>
+     <!-- <script>
+        $(function(){
+            $("form[name='registration']").validate({
+                rules:{
+                    firstname: "required",
+                    lastname: "required",
+                    email:{
+                        required: true,
+                        email: true
+                    },
+                    password:{
+                        required: true,
+                        minlength: 8
+                    }
+                },
+                messages:{
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    email: "Please enter a valid email address",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 8 characters long"
+                    }
+                },
+                submitHandler: function(form){
+                    form.submit();
+                }
+            });
+        });
+    </script> -->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-size:14px;
+            background-color: aqua;
+        }
+        .container{
+            width:500px;
+            margin:25px auto;
+        }
+        form{
+            padding: 20px;
+            background: #2c3e50;
+            color:#fff;
+            border-radius:4px;
+        }
+        form label,form input, form button{
+            border:0;
+            margin-bottom: 3px;
+            display: block;
+            width:100%;
+        }
+        form input{
+            height:25px;
+            line-height: 25px;
+            background: #fff;
+            color:#000;
+            padding:0 6px;
+            box-sizing:border-box;
+        }
+        form button{
+            height:30px;
+            line-height:30px;
+            background: #e67e2e;
+            color:#fff;
+            margin-top: 10px;
+            cursor:pointer;
+        }
+        form.error{
+            color:#9ca9d7;
+        }
+    </style>
+</head>
+<body>
+    <form methoid="post" action=""name="registration">
+        <label for="firstname">FirstName</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Yash"/>
+        <br>
+        <label for="lastname">lastname</label>
+        <input type="text" name="lastname" id="lastname" placeholder="lalaji"/>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Yash@gmail.com"/>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="&#9679;"/>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

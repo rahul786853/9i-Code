@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../cdnjquery/jquery2/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b").click(function () {
+                $("#a").slideDown();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div style="border:solid; height:50px; width:300px;display:none; overflow: hidden" id="a">Click to slide </div>
+    <div style="border:solid; height:200px; width:300px; " id="b">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo accusantium pariatur culpa dolor vero modi
+            dolores, porro, ad in, obcaecati fugiat nostrum tempora. Harum optio esse, culpa recusandae reiciendis
+            necessitatibus.</p>
+    </div>
+</body>
+
+</html>

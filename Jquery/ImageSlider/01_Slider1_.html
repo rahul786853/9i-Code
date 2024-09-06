@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../cdnjquery/jquery2/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="1slider1_.css">
+    <!-- <script>
+        $(document).ready(function(){
+            $("#slideshow>div:gt(0)").hide();
+            setInterval(function(){
+                $('#slideshow>div:first')
+                fadeOut(1000)
+                    .next()
+                fadeIn(1000)
+                    .end()
+                    .appendTo('#slideshow');
+            }, 3000);
+        })
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#slideshow > div:gt(0)").hide();
+        setInterval(function(){
+            $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+        }, 3000);
+    });
+</script>
+
+  
+</head>
+
+<body>
+    <div id="slideshow">
+        <div>
+            <img src="../photos/SSS.jpg" alt="">
+        </div>
+        <div>
+            <img src="../photos/DNA.jpg" alt="">
+        </div>
+
+    </div>
+</body>
+
+</html>

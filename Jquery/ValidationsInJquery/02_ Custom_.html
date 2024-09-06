@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../cdnjquery/jquery2/jquery-1.10.2.js"></script>
+    <!-- <script>
+        $(document).ready(function(){
+            $('#name').blur(function(){
+                Validatename();
+            });
+            function Validatename()
+            {
+                var namevalue=$("#name").val();
+                var regexp=new pegexp('^([a-z A-z]) +$');
+                if(namevalue==" ")  
+        {
+            $('#show-error1').html('field is empty');
+            $('Show-error').css('color','red');
+            return false;
+        }
+        if(regexp.test(namevalue))
+        {
+            $('#show-error1').html(' ');
+            return true;
+        }
+        else{
+            $('#Show-error1').html('username is invalid,use only letter');
+            $('#show-error1').css('later','red')
+            return false;
+        }
+    }
+        $('#fname').blur(function(){
+            validatefname();
+        });
+        function validatefname()
+        {
+            var fnamevalue=$('#fname').val();
+            var regexp=new Regexp('^([a-2A-z]))+$');
+            if(fnamevalue==" ")
+            {
+                $("#show-error2").html('field is empty');
+                $("show-error2").css('color','red');
+                return false;
+            }
+            if(regexp.test(fnamevalue))
+            {
+                $('#show-error2').html('farhername is invalid,use only letters');
+                $('#show-error2').css('color','red');
+                return false;
+            }
+        }
+                $('#class').blur(function(){
+                    validateClass()
+                });
+                function validateClass(){
+                    var classvalue=$('#class').val();
+                 var regexp=new PegExp('^([a-zA-20-9])+$')
+                 }
+                if(classvalue==" ")
+                {
+                    $('#show-error3').html('field is empty');
+                    $('#show-error3').css('color','red');
+                    return false;
+                }
+                if(regexp.test(classvalue))
+                {
+                   $('#show-error3').html(' ');
+                   return true;
+                }
+                else{
+                    $('#show-error3').html('class is invalid, pls enter correct class');
+                    $('#show-error').css('color','red');
+                    return false;
+                }
+
+                $('#contact').blur(function(){
+                    validateContact();
+                });
+                function validateContact(){
+                    var Contactvalue=$('#Contact').val();
+                    var regexp=new RegExp('^([0-9])+$');
+                    if(Contactvalue==" ")
+                    {
+                        $('#show-error').html('field is empty');
+                        $('#show-error').css('color','red');
+                        return false;
+                    }
+                    if(regexp.test(Contactvalue))
+                    {
+                        $('#show-error').html(' ');
+                        return true;
+                    }
+                    else{
+                        $('#show-error4').html(" is invalid");
+                        $('#show-error4').css('color','red');
+                        return false;
+                    }
+                }
+                $('#form1').submit(function(){
+                    var nameerror=Validatename();
+                    var fnameerror=Validatefname();
+                    var Classerror=ValidateClass();
+                    var Contacterror=Validatecontact();
+                    if(nameerror===true&&fnameerror
+                    === true&& Classerror=== true&&
+                    Contacterror===true)
+                       return true;
+                    else
+                        return false;
+                });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div id="show-error1"></div>
+
+        <label for="fname">Father's Name:</label>
+        <input type="text" id="fname" name="fname">
+        <div id="show-error2"></div>
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class">
+        <div id="show-error3"></div>
+
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact">
+        <div id="show-error4"></div>
+
+        <input type="submit" value="Submit">
+    </form> -->
+<!-- </body> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#name').blur(function(){
+                validateName();
+            });
+
+            function validateName() {
+                var nameValue = $("#name").val();
+                var regexp = /^[a-zA-Z]+$/;
+
+                if (nameValue.trim() === "") {
+                    $('#show-error1').html('Field is empty');
+                    $('#show-error1').css('color', 'red');
+                    return false;
+                }
+
+                if (regexp.test(nameValue)) {
+                    $('#show-error1').html(' ');
+                    return true;
+                } else {
+                    $('#show-error1').html('Username is invalid, use only letters');
+                    $('#show-error1').css('color', 'red');
+                    return false;
+                }
+            }
+
+            $('#fname').blur(function(){
+                validateFname();
+            });
+
+            function validateFname() {
+                var fnameValue = $('#fname').val();
+                var regexp = /^[a-zA-Z]+$/;
+
+                if (fnameValue.trim() === "") {
+                    $("#show-error2").html('Field is empty');
+                    $("#show-error2").css('color', 'red');
+                    return false;
+                }
+
+                if (regexp.test(fnameValue)) {
+                    $('#show-error2').html(' ');
+                    return true;
+                } else {
+                    $('#show-error2').html('Father name is invalid, use only letters');
+                    $('#show-error2').css('color', 'red');
+                    return false;
+                }
+            }
+
+            $('#class').blur(function(){
+                validateClass();
+            });
+
+            function validateClass() {
+                var classValue = $('#class').val();
+                var regexp = /^[a-zA-Z0-9]+$/;
+
+                if (classValue.trim() === "") {
+                    $('#show-error3').html('Field is empty');
+                    $('#show-error3').css('color', 'red');
+                    return false;
+                }
+
+                if (regexp.test(classValue)) {
+                    $('#show-error3').html(' ');
+                    return true;
+                } else {
+                    $('#show-error3').html('Class is invalid, please enter correct class');
+                    $('#show-error3').css('color', 'red');
+                    return false;
+                }
+            }
+
+            $('#contact').blur(function(){
+                validateContact();
+            });
+
+            function validateContact() {
+                var contactValue = $('#contact').val();
+                var regexp = /^[0-9]+$/;
+
+                if (contactValue.trim() === "") {
+                    $('#show-error4').html('Field is empty');
+                    $('#show-error4').css('color', 'red');
+                    return false;
+                }
+
+                if (regexp.test(contactValue)) {
+                    $('#show-error4').html(' ');
+                    return true;
+                } else {
+                    $('#show-error4').html('Contact is invalid');
+                    $('#show-error4').css('color', 'red');
+                    return false;
+                }
+            }
+        });
+    </script> -->
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div id="show-error1"></div>
+
+        <label for="fname">Father's Name:</label>
+        <input type="text" id="fname" name="fname">
+        <div id="show-error2"></div>
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class">
+        <div id="show-error3"></div>
+
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact">
+        <div id="show-error4"></div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+</html>

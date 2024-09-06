@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Jquery/cdnjquery/jquery2/jquery-1.10.2.js"></script>
+    <style>
+        .ab {
+            color: rgb(245, 16, 16);
+        }
+    </style>
+    <script>
+        $(documment).ready(function(){
+            $("#b1").click(function(){
+                $("p").addClass("ab");
+            });
+            $("#b2").click(function(){
+                $("p").removeClass("ab");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p class=" ">Text</p>
+    <button id="b1">Click1</button>
+    <button id="b2">Click2</button>
+</body>
+
+</html>
